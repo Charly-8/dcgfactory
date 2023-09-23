@@ -1,0 +1,364 @@
+@use '../../base/variables' as v;
+@use '../../base/mixins' as m;
+
+
+.tituloContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__titulo {
+
+        // Mobile 
+        
+        @include m.mobile {
+            font-size: 2.8rem;
+            margin-top: 5rem;
+        }
+
+        // Tablet
+
+        @include m.tablet {
+            font-size: 3rem;
+            margin-top: 8rem;
+        }
+
+        // Desktop
+        
+        @include m.desktop {
+            font-size: 3.6rem;
+            margin: 10rem;
+        }
+    }
+}
+
+.designContacto {
+    display: block;
+
+    &__mobile {
+        width: 100%;
+
+        // Desktop 
+
+        @include m.desktop {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        width: 100%;
+
+        // Mobile 
+        
+        @include m.mobile {
+            display: none;
+        }
+
+        // Tablet
+        
+        @include m.tablet {
+            display: none;
+        }
+    }
+
+    .infoContacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        background-color: rgba(16, 152, 247, 0.2);
+                      
+        .contactoTitulo {
+            width: 100%;
+            text-align: center;
+    
+            &__titulo {
+    
+                // Mobile
+    
+                @include m.mobile {
+                    font-size: 2.8rem;
+                    margin: 3rem;
+                    line-height: 4rem;
+                }
+
+                // Tablet
+    
+                @include m.tablet {
+                    font-size: 3rem;
+                    margin: 5rem;
+                }
+
+                // Desktop
+    
+                @include m.desktop {
+                    font-size: 3.6rem;
+                    margin: 6rem;
+                }
+            }
+        }
+    
+        .ubimap {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           width: 85%;
+           height: 40rem;
+           overflow: hidden; // Para que iframeMap no salga de contenedor
+
+           // Desktop 
+
+           @include m.desktop {
+            height: 60rem;
+           }
+    
+           &__iframeMap {
+                width: 100%;
+                height: 100%;
+            }
+            
+        }
+    
+        .ubiph {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 85%;
+
+            // Mobile 
+
+            @include m.mobile {
+                margin-top: 3rem;
+            }
+            
+            // Tablet
+
+            @include m.tablet {
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 3rem;
+            }
+
+            // Desktop
+
+            @include m.desktop {
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin: 10rem;
+            }
+    
+            .telephone {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-weight: v.$medium;
+                border-radius: 2rem;
+                background: linear-gradient(145deg, rgba(16, 152, 247, 0.2), #f0f0f0);
+                box-shadow: 5px 5px 5px #ffffff, -10px -10px 30px #ffffff;
+                padding: 2rem;
+
+                // Mobile
+
+                @include m.mobile {
+                    margin-bottom: 4rem;
+                    width: 21rem;
+                }
+                
+                // Desktop
+
+                @include m.desktop {
+                    padding: 2rem;
+                    width: 22rem;
+                }
+
+                .telephoneinfo {
+                    display: flex;
+
+                    // Mobile
+    
+                    @include m.mobile {
+                        margin-top: 3rem;
+                        margin-bottom: 2rem;
+    
+                        &__icono {
+                            width: 2rem;
+                        }
+    
+                        &__number {
+                            font-size: 1.5rem;
+                            margin-left: 1rem;
+                            color: v.$black;
+                        }
+                    }
+    
+                    // Tablet
+    
+                    @include m.tablet {
+                        margin: 2rem;
+    
+                        &__icono {
+                            width: 2rem;
+                        }
+    
+                        &__number {
+                            font-size: 1.5rem;
+                            margin-left: 1rem;
+                            color: v.$black;
+                        }
+                    }
+    
+                    // Desktop
+    
+                    @include m.desktop {
+                        margin: 2rem;
+    
+                        &__icono {
+                            width: 2rem;
+                        }
+    
+                        &__number {
+                            font-size: 1.7rem;
+                            margin-left: 1rem;
+                            color: v.$black;
+                        }
+                    }
+                }
+            }
+    
+            .ubication {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-weight: v.$medium;
+                border-radius: 2rem;
+                background: linear-gradient(145deg, rgba(16, 152, 247, 0.2), #f0f0f0);
+                box-shadow: 5px 5px 5px #ffffff, -10px -10px 30px #ffffff;
+                padding: 2rem;
+
+                // Mobile
+
+                @include m.mobile {
+                    margin-bottom: 4rem;
+                    width: 24rem;
+                }
+                
+                // Desktop
+
+                @include m.desktop {
+                    padding: 2rem;
+                    width: 26rem;
+                }
+
+                .ubiinfo {
+                    display: flex;
+                
+                // Mobile
+    
+                @include m.mobile {
+                    margin: 2rem;
+    
+                    &__icono {
+                        width: 2rem;
+                    }
+    
+                    &__map {
+                        font-size: 1.5rem;
+                        margin-left: 1rem;
+                        color: v.$black;
+                    }
+                }
+    
+                // Tablet
+    
+                @include m.tablet {
+                    margin: 2rem;
+    
+                    &__icono {
+                        width: 2rem;
+                    }
+    
+                    &__map {
+                        font-size: 1.5rem;
+                        margin-left: 1rem;
+                        color: v.$black;
+                    }
+                }
+    
+                // Desktop
+    
+                @include m.desktop {
+                    margin: 2rem;
+    
+                    &__icono {
+                        width: 2rem;
+                    }
+    
+                    &__map {
+                        font-size: 1.7rem;
+                        margin-left: 1rem;
+                        color: v.$black;
+                    }
+                }
+                }
+            }
+    
+            .horarioTitulo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2rem;
+                background: linear-gradient(145deg, rgba(16, 152, 247, 0.2), #f0f0f0);
+                box-shadow:  10px 10px 10px #ffffff,
+                -20px -20px 60px #ffffff;
+                
+                // Mobile
+                 
+                @include m.mobile {
+                    padding: 2rem;
+                    margin-bottom: 4rem;
+                    width: 21rem;
+                }
+
+                // Tablet
+
+                @include m.tablet {
+                    padding: 2rem;
+                    width: 21rem;
+                }
+                
+                // Desktop
+
+                @include m.desktop {
+                    padding: 2rem;
+                }
+    
+                &__titulo {
+                    margin: 1rem;
+                }
+    
+                &__txt {
+                    font-size: 1.5rem;
+                    margin: 2rem;
+                    margin-bottom: 3rem;
+
+                    // Desktop
+
+                    @include m.desktop {
+                        font-size: 1.7rem;
+                    }
+                }
+    
+                span {
+                    font-weight: v.$bold;
+                }
+            }
+        }
+    }
+}

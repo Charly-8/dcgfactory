@@ -1,0 +1,89 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    // Mobile 
+    
+    @include m.mobile {
+        height: 35rem;
+    }
+
+    // Tablet
+    
+    @include m.tablet {
+        height: 40rem;
+    }
+
+    // Desktop
+    
+    @include m.desktop {
+        height: 50rem;
+    }
+
+    .inicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        &__imagen {
+            filter: brightness(50%);
+            height: auto;
+        }
+    }
+
+    .textM {
+        position: absolute; 
+        
+
+        // Mobile 
+
+        @include m.mobile {
+            width: 30rem;
+        }
+
+        // Tablet
+
+        @include m.tablet {
+            width: 30rem;
+        }
+
+        // Desktop
+
+        @include m.desktop {
+            width: 35rem;
+        }
+
+        &__titulo {
+            text-align: center;
+            color: v.$white;
+
+            // Mobile 
+            
+            @include m.mobile {
+                font-size: 3rem;
+                line-height: 5rem;
+            }
+    
+            // Tablet
+    
+            @include m.tablet {
+                font-size: 3.2rem;
+                line-height: 6rem;
+            }
+    
+            // Desktop
+            
+            @include m.desktop {
+                font-size: 3.6rem;
+                line-height: 7rem;
+            }
+        }
+    }
+}

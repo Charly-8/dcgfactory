@@ -1,0 +1,215 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.info {
+
+    // Mobile
+    
+    @include m.mobile {
+        display: flex;
+        flex-direction: column;
+        max-width: 85%; // Para que se ajuste a todo tipo de pantalla
+        margin: 5rem auto; // Para centrar todo el contenedor
+    }
+
+    // Tablet
+
+    @include m.tablet {
+        @include m.grid(2, 8rem);
+        max-width: 90%; // Para que se ajuste a todo tipo de pantalla
+        margin: 5rem auto; // Para centrar todo el contenedor
+    }
+
+    // Desktop
+
+    @include m.desktop {
+        @include m.grid(2, 8rem);
+        max-width: 90%; // Para que se ajuste a todo tipo de pantalla
+        margin: 10rem auto; // Para centrar todo el contenedor
+    }
+
+    .experiencia {
+        
+        // Mobile
+
+        @include m.mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // Tablet
+
+        @include m.tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        // desktop
+
+        @include m.desktop {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        &__icono {
+
+            // Mobile
+
+            @include m.mobile {
+                width: 12rem;
+            }
+
+            // Tablet
+
+            @include m.tablet {
+                width: 12rem;
+            }
+
+            // Desktop
+
+            @include m.desktop {
+                width: 12rem;
+            }
+        }
+
+        &__titulo {
+            
+            // Mobile 
+
+            @include m.mobile {
+                margin-top: 3rem;
+                font-size: 2.8rem;
+            }
+
+            // Tablet
+
+            @include m.tablet {
+                margin-top: 3rem;
+                font-size: 3rem;
+            }
+
+            // Desktop
+
+            @include m.desktop {
+                margin-top: 5rem;
+                font-size: 3.6rem;
+            }
+
+        }
+
+        &__txt {
+
+            // Mobile
+
+            @include m.mobile {
+                margin-top: 3rem;
+                text-align: center;
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+
+            // Tablet
+
+            @include m.tablet {
+                margin-top: 3rem;
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+
+            //  Desktop
+
+            @include m.desktop {
+                margin-top: 5rem;
+                font-size: 1.7rem;
+                line-height: 3rem;
+            }
+        }
+    }
+
+    .transporte {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+
+        &__icono {
+
+            // Mobile
+
+            @include m.mobile {
+                width: 12rem;
+            }
+
+            // Tablet
+
+            @include m.tablet {
+                width: 12rem;
+            }
+
+            // Desktop
+
+            @include m.desktop {
+                width: 12rem;
+                margin-top: 2rem;
+            }
+        }
+
+        &__titulo {
+            
+            // Mobile 
+
+            @include m.mobile {
+                margin-top: 3rem;
+                font-size: 2.8rem;
+            }
+
+            // Tablet
+
+            @include m.tablet {
+                margin-top: 3rem;
+                font-size: 3rem;
+            }
+
+            // desktop
+
+            @include m.desktop {
+                margin-top: 3rem;
+                font-size: 3.6rem;
+            }
+        }
+
+        &__txt {
+
+            // Mobile
+
+            @include m.mobile {
+                margin-top: 3rem;
+                text-align: center;
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+
+            // Tablet
+
+            @include m.tablet {
+                margin-top: 3rem;
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+
+            // desktop
+
+            @include m.desktop {
+                margin-top: 5rem;
+                font-size: 1.7rem;
+                line-height: 3rem;
+            }
+        }
+    }
+}

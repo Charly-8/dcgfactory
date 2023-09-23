@@ -1,0 +1,24 @@
+// Fuente titulos y subtitulos
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+$f_title: 'Roboto', sans-serif;
+
+// Fuente cuerpo
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+$f_body: 'Open Sans', sans-serif;
+
+// Weights
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Responsive
+$mobile-max: 767px;
+$tablet: 768px;
+$tablet-max: 1024px;
+$desktop: 1025px;
+
+// Colors
+$black: #000000;
+$dodger_blue: #1098F7;
+$white: #FFFFFF;
+$yellow: #FFB703;

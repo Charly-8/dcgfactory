@@ -1,0 +1,38 @@
+@use 'variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: v.$f_body;
+    font-weight: v.$regular;
+    line-height: 2rem;
+}
+
+h1 {
+    font-family: v.$f_title;
+    font-weight: v.$bold;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}

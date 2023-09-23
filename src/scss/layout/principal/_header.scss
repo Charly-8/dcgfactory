@@ -1,0 +1,165 @@
+// Navegación
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.header {
+    background-color: v.$dodger_blue;
+
+    // Mobile
+    
+    @include m.mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden; // Para que no salga el menú del contenedor
+    }
+
+    // Tablet
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden; // Para que no salga el menú del contenedor
+    }
+
+    // Desktop
+
+    @include m.desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+
+        @include m.mobile {
+            padding: 2rem;
+        }
+
+        @include m.tablet {
+            padding: 3rem;
+        }
+
+        @include m.desktop {
+            padding: 4rem;
+            margin-left: 2rem;
+            width: 13rem;
+        }
+    }
+
+    .navmobile {
+        & a {
+            color: v.$white;
+            font-weight: v.$medium;
+        }
+
+        @include m.mobile {
+            // flex y column para que cuando no esté la clase mostrar mantega su posicion de column
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            visibility: hidden; // Siempre va a estar oculta, se muestra con la clase .mostrar
+            opacity: 0;
+            height: 7.5rem;
+            transition: visibility .3s ease-in-out, opacity .3s linear, height .5s linear;
+
+            // La case .mostrar se activa por medio de JS al evento click
+            &.mostrar {
+                visibility: visible; // Para que se muestre al tocar el icono de menu
+                opacity: 1;
+                height: 18rem;
+            }
+            
+            & a {
+                padding: 1rem;
+                margin: 1rem;
+                font-size: 1.6rem;
+            }
+        }
+
+        // Tablet
+
+        @include m.tablet {
+            // flex y column para que cuando no esté la clase mostrar mantega su posicion de column
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            visibility: hidden; // Siempre va a estar oculta, se muestra con la clase .mostrar
+            opacity: 0;
+            height: 10rem;
+            transition: visibility .3s ease-in-out, opacity .3s linear, height .5s linear;
+
+            // La case .mostrar se activa por medio de JS al evento click
+            &.mostrar {
+                visibility: visible; // Para que se muestre al tocar el icono de menu
+                opacity: 1;
+                height: 18rem;
+            }
+            
+            & a {
+                padding: 1rem;
+                margin: 1rem;
+                font-size: 1.6rem;
+            }
+        }
+
+        // Desktop
+
+        @include m.desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+            margin-right: 5rem;
+
+            & a {
+                padding: 1rem;
+                margin: 1rem;
+                font-size: 1.6rem;
+            }   
+        }
+    }
+
+    .menumobile {
+        display: none;
+
+        // Mobile
+
+        @include m.mobile {
+            display: block;
+            transform: rotate(0deg);
+            transition: transform .5s ease-in-out;
+
+            &__logo {
+                padding: 2rem;
+            }
+
+            // Al activarse la clase girar
+            &.girar {
+                transform: rotate(90deg);
+                transition: transform .5s ease-in-out;
+            }
+        }
+
+        // Tablet
+        
+        @include m.tablet {
+            display: block;
+            transform: rotate(0deg);
+            transition: transform .5s ease-in-out;
+
+            &__logo {
+                padding: 2rem;
+            }
+
+            // Al activarse la clase girar
+            &.girar {
+                transform: rotate(90deg);
+                transition: transform .5s ease-in-out;
+            }
+        }
+    }
+}
