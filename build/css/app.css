@@ -385,9 +385,8 @@ a {
 }
 @media (min-width: 1025px) {
   .header__logo {
-    padding: 4rem;
-    margin-left: 2rem;
-    width: 15rem;
+    margin: 2rem;
+    width: 8rem;
   }
 }
 .header .navmobile a {
