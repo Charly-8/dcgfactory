@@ -2,45 +2,37 @@
 @use 'base/mixins' as m;
 
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
     // Mobile 
     
-    @include m.mobile {
-        height: 35rem;
-    }
+    // @include m.mobile {
+    //     height: 35rem;
+    // }
 
     // Tablet
     
     @include m.tablet {
-        height: 40rem;
+        height: 100%;
     }
 
     // Desktop
     
-    @include m.desktop {
-        height: 50rem;
-    }
+    // @include m.desktop {
+    //     height: 90rem;
+    // }
 
     .inicio {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        position: relative;
 
         &__imagen {
-            filter: brightness(50%);
+            // filter: brightness(50%);
+            width: 100%;
             height: auto;
         }
     }
 
     .textM {
-        position: absolute; 
-        
 
         // Mobile 
 
