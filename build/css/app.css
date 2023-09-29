@@ -374,18 +374,20 @@ a {
 @media (max-width: 767px) {
   .header__logo {
     padding: 2rem;
+    width: 8rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .header__logo {
     padding: 3rem;
+    width: 12rem;
   }
 }
 @media (min-width: 1025px) {
   .header__logo {
     padding: 4rem;
     margin-left: 2rem;
-    width: 13rem;
+    width: 15rem;
   }
 }
 .header .navmobile a {

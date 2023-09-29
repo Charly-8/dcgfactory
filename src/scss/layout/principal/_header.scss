@@ -37,16 +37,18 @@
 
         @include m.mobile {
             padding: 2rem;
+            width: 8rem;
         }
 
         @include m.tablet {
             padding: 3rem;
+            width: 12rem;
         }
 
         @include m.desktop {
             padding: 4rem;
             margin-left: 2rem;
-            width: 13rem;
+            width: 15rem;
         }
     }
 
